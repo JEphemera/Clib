@@ -1,3 +1,0 @@
-C:/Users/JEphemera/Documents/CLib/Csort/cmake-build-debug/CMakeFiles/Csort.dir
-C:/Users/JEphemera/Documents/CLib/Csort/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/JEphemera/Documents/CLib/Csort/cmake-build-debug/CMakeFiles/rebuild_cache.dir

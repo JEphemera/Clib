@@ -14,6 +14,44 @@ void Swap(int *a,int *b){
     *a=*b;
     *b=tmp;
 }
+
+/*
+ * @brief   BubbleSort  BubbleSort an array
+ * @param   array[]     array[] to sort
+ * @param   len         length of array
+ */
+void BubbleSort(int array[],int len){
+    for(int i=0;i<len-1;i++){
+        int bubble_flag=1;
+        for (int j = i+1; j < len; ++j) {
+            if(array[i]>array[j]){
+                Swap(&array[i],&array[j]);
+                bubble_flag=0;
+            }
+        }
+        if(bubble_flag)
+            break;
+    }
+}
+
+/*
+ * @brief   SelectionSort   SelectionSort an array
+ * @param   array[]     array[] to sort
+ * @param   len         length of array
+ */
+void SelectionSort(int array[],int len){
+    for (int i = 0; i < len-1; ++i) {
+        int min=i;
+        for (int j = i+1; j < len; ++j) {
+            if(array[min]>array[j]) {
+                min = j;
+            }
+        }
+        if(min!=i)
+            Swap(&array[min],&array[i]);
+    }
+}
+
 /*
  * @brief   MaxHeapify  Generating partial big top heap
  * @param   array[]     heap array
@@ -48,7 +86,7 @@ void BuildMaxHeap(int array[],int len){
 }
 
 /*
- * @brief   HeapSort    HeapSort a array
+ * @brief   HeapSort    HeapSort an array
  * @param   array[]     array[] to sort
  * @param   len         length of array
  */

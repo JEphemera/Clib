@@ -9,9 +9,15 @@
 #include <stdio.h>
 
 void Swap(int *a,int *b);
+
 void MaxHeapify(int array[],int i,int heap_size);
 void BuildMaxHeap(int array[],int len);
 void HeapSort(int array[],int len);
+
+void BubbleSort(int array[],int len);
+
+void SelectionSort(int array[],int len);
+
 
 #endif
 
