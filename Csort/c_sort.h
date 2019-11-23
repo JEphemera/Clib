@@ -18,6 +18,8 @@ void BubbleSort(int array[],int len);
 
 void SelectionSort(int array[],int len);
 
+void CountingSort(int array[],int len);
+
 
 #endif
 

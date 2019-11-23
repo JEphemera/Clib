@@ -53,6 +53,37 @@ void SelectionSort(int array[],int len){
 }
 
 /*
+ * @brief   CountingSort   CountingSort an array
+ * @param   array[]     array[] to sort
+ * @param   len         length of array
+ */
+void CountingSort(int array[],int len){
+    int max=array[0];
+    for (int i = 1; i < len; ++i) {
+        if(array[i]>max){
+            max=array[i];
+        }
+    }
+
+    int bucketlen=max+1;
+    int bucket[bucketlen];
+    for (int i = 0; i < bucketlen; ++i) {
+        bucket[i]=0;
+    }
+    for (int i = 0; i < len; ++i) {
+        bucket[array[i]]++;
+    }
+    int sortedIndex=0;
+    for (int i = 0; i < bucketlen; ++i) {
+        while(bucket[i]>0){
+            array[sortedIndex]=i;
+            sortedIndex+=1;
+            bucket[i]-=1;
+        }
+    }
+}
+
+/*
  * @brief   MaxHeapify  Generating partial big top heap
  * @param   array[]     heap array
  * @param   i           heap element number
